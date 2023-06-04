@@ -1,0 +1,17 @@
+<h2>todoapp</h2>
+
+<%= link_to "CREATE NEW TASK", "tasks/new" %>
+
+<h2>TASK LIST</h2>
+<% @tasks.each do |task| %>
+  <p>・<%= task.title %>
+  <%= link_to "編集", "/tasks/" + task.id.to_s + "/edit" %></p>
+  <%# <% binding.pry %>
+  <%= button_to "削除", "/tasks/" + task.id.to_s, method: :delete %></p>
+  
+<% end %>
+
+
+
+
+

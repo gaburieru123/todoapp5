@@ -1,0 +1,11 @@
+<h2>EDIT TASK</h2>
+
+
+<%= form_with model: @task, url: "/tasks/:id", local: true do |f| %>
+  <%# <% binding.pry %>
+  <p><%= f.text_field :title %></p>
+  <p><%= f.submit "更新" %></p>
+  <%# <% binding.pry %>
+  <% end %>
+
+
